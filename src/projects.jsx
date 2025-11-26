@@ -5,7 +5,6 @@ export const projects = [
     title: "Water Treatment Cost, Risk & Health Impact Analysis",
     tags: ["ML", "Python", "Data"],
     blurb: "A scientific analysis exploring how treatment choices affect operational cost, environmental risk, and public health outcomes",
-    image: "/src/assets/watertreatment.jpg",
     action: { label: "View case study", href: "https://github.com/saudenaa/water-risk-cost-env-analysis" }
   },
   {
@@ -13,7 +12,7 @@ export const projects = [
     title: "ClickSnitch — Phishing Detection Tool",
     tags: ["Cyber", "Community", "Data"],
     blurb: "A lightweight machine-learning phishing-detection engine that identifies malicious URLs, classifies risk levels, and explains threat patterns through a clear, interactive dashboard.",
-    image: "/src/assets/clicksnitch.jpg",
+    
     action: { label: "See event", href: "https://github.com/saudenaa/ClickSnitch" }
   },
 
@@ -22,7 +21,7 @@ export const projects = [
     title: "NASA Space Apps — Local Lead",
     tags: ["Events", "Community", "Data"],
     blurb: "Organising sponsors, mentors, dashboards and storytelling.",
-    image: "/src/assets/nasaspaceappscincy.jpg",
+    
     action: { label: "See event", href: "https://www.spaceappschallenge.org/2025/local-events/cincinnati/" }
   },
 
@@ -31,7 +30,7 @@ export const projects = [
     title: "Personal Portfolio",
     tags: ["Events", "Community", "Data"],
     blurb: "A fully custom, multi-section portfolio designed and engineered from scratch using React, Vite, custom UI components, and glassmorphism-based UX.",
-    image: "/src/assets/profile.jpg",
+   
     action: { label: "See event", href: "#" }
   },
 
@@ -40,7 +39,7 @@ export const projects = [
     title: "Linux VM & Cross-Functional System Operations",
     tags: ["Unix", "VM", "Linux"],
     blurb: "A hands-on project involving Linux server setup, user/permission management, remote access, package control, and system monitoring.",
-    image: "/src/assets/linux.jpg",
+    
     action: { label: "See event", href: "#" }
   },
 
@@ -49,7 +48,7 @@ export const projects = [
     title: "SQL Database Design & Management",
     tags: ["database", "SQL", "Data"],
     blurb: "End-to-end development of a relational database system including schema design, ERD modelling, normalisation, stored procedures, triggers, and test queries.",
-    image: "/src/assets/sql.jpg",
+    
     action: { label: "See event", href: "#" }
   }
 
