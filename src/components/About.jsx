@@ -9,7 +9,7 @@ export default function About() {
 
         {/* LEFT IMAGE SECTION */}
         <div className="about-photo">
-          <img src="/src/assets/profile.jpg" alt="Amy Sauden" />
+         
         </div>
 
         {/* RIGHT CONTENT */}
