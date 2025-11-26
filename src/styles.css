@@ -236,24 +236,15 @@ a { color: var(--text); text-decoration: none; }
   box-shadow: 0 24px 60px rgb(75, 9, 31);
 }
 
-/* Project Image Styles */
-.project-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 16px;
-  margin-bottom: 14px;
-  transition: transform .35s ease;
-}
 
-.project-card-glass:hover .project-img {
+.project-card-glass:hover {
   transform: scale(1.06);
 }
 
 /* Project Text */
 .project-name {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
   margin: 8px 0;
   color: #dddcdc;
 }
