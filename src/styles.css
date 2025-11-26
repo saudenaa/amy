@@ -243,15 +243,15 @@ a { color: var(--text); text-decoration: none; }
 
 /* Project Text */
 .project-name {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   margin: 8px 0;
   color: #dddcdc;
 }
 
 .project-desc {
   color: #dddcdc;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 22px;
 }
 
