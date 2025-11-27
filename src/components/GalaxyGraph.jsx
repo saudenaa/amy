@@ -65,7 +65,7 @@ export default function GalaxyGraph() {
     { title: "NASA Space Apps", link: "https://spaceappschallenge.org" },
     { title: "PowerBI Dashboards", link: "https://your-dashboard.com" },
     { title: "GitHub", link: "https://github.com/saudenaa" },
-    { title: "LinkedIn", link: "https://linkedin.com/in/amishasauden" }
+    { title: "LinkedIn", link: "https://linkedin.com/in/amysauden" }
   ];
 
   const { nodes, lines } = useMemo(() => {
