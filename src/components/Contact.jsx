@@ -28,10 +28,7 @@ export default function Contact({ formRef, sendEmail, sending, sent }) {
             <span>GitHub</span>
           </a>
 
-          <a className="contact-link">
-            <i className="fa-solid fa-phone"></i>
-            <span>(513) 307-2996</span>
-          </a>
+          
         </div>
 
         {/* GLASS FORM */}
