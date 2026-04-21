@@ -26,13 +26,15 @@ export default function About() {
           <h2 className="about-title">About Me</h2>
 
           <p className="about-intro">
-            I’m Amy, cybersecurity and data student who likes building things that are practical,
-            useful, and easy to understand. Most of my work sits at the intersection of security and research.
+            I’m Amy — I operate at the intersection where business logic meets data infrastructure.
+            Studying Cybersecurity and Data Science at the University of Cincinnati, while embedding
+            myself in Fortune 20 logistics operations at Kroger and leading community tech initiatives for NASA.
           </p>
 
           <p className="about-intro">
-            
-            
+            I don’t choose between understanding systems and building them. I do both —
+            and that dual fluency is exactly what makes the difference between a recommendation
+            and an intervention that actually gets adopted.
           </p>
 
           {/* TABS */}

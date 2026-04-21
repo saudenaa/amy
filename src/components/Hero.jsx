@@ -1,46 +1,78 @@
-import React from "react";
-import GalaxyGraph from "./GalaxyGraph";
+import { FiArrowDown } from "react-icons/fi";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import NetworkGraph from "./NetworkGraph.jsx";
 
-export default function Hero({ onJump }) {
+export default function Hero() {
+  const jumpTo = (id) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
   return (
-    <section id="home" className="hero-section">
-      {/* LEFT SIDE TEXT */}
-      <div className="hero-left">
-        <h1 className="hero-title">
-          Hi, i'm <span className="highlight">Amy</span> Sauden.
-        </h1>
+    <section id="hero">
+      <div className="container">
+        <div className="hero-inner">
 
-        <p className="hero-subtitle">
-          Exploring. Questioning. Learning.
-  
-        </p>
+          {/* ── Left ─────────────────────────────────── */}
+          <div className="hero-left">
+            <span className="hero-eyebrow">
+              UC Cincinnati &nbsp;·&nbsp; Cybersecurity &amp; Data &nbsp;·&nbsp; May&nbsp;2029
+            </span>
 
-        {/* SOCIAL ICONS (now inside hero-left) */}
-        <div className="hero-social">
-          <a
-            href="https://www.linkedin.com/in/amysauden/"
-            target="_blank"
-            rel="noreferrer"
-            className="social-icon linkedin"
-          >
-            <i className="fab fa-linkedin-in"></i>
-          </a>
+            <h1 className="hero-name">
+              Amy<br />
+              <span className="hero-name-accent">Sauden.</span>
+            </h1>
 
-          <a
-            href="https://github.com/saudenaa"
-            target="_blank"
-            rel="noreferrer"
-            className="social-icon github"
-          >
-            <i className="fab fa-github"></i>
-          </a>
+            <p className="hero-tagline">
+              I build tools that change<br className="tagline-break" />
+              how people actually work.
+            </p>
+
+            <div className="hero-ctas">
+              <button className="btn-primary" onClick={() => jumpTo("work")}>
+                Explore My Work
+              </button>
+              <button className="btn-secondary" onClick={() => jumpTo("video")}>
+                Watch Intro
+              </button>
+            </div>
+
+            <div className="hero-socials">
+              <a
+                href="https://www.linkedin.com/in/amysauden/"
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="https://github.com/saudenaa"
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+            </div>
+          </div>
+
+          {/* ── Right: 3-D graph ────────────────────── */}
+          <div className="hero-graph">
+            <NetworkGraph />
+          </div>
         </div>
       </div>
 
-      {/* RIGHT SIDE 3D GRAPH */}
-      <div className="hero-right no-bg">
-        <GalaxyGraph />
-      </div>
+      <button
+        className="scroll-arrow"
+        onClick={() => jumpTo("work")}
+        aria-label="Scroll to work"
+      >
+        <span>scroll</span>
+        <FiArrowDown />
+      </button>
     </section>
   );
 }
