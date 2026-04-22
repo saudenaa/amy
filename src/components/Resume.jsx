@@ -23,7 +23,7 @@ export default function Resume() {
             <div className="rp-header">
               <h1 className="rp-name">Amy Sauden</h1>
               <div className="rp-contact">
-                <span>amishasauden5@gmail.com</span>
+                <span>saudenaa@mail.uc.edu</span>
                 <span>·</span>
                 <span>linkedin.com/in/amysauden</span>
                 <span>·</span>
