@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiMoon, FiDownload } from "react-icons/fi";
 
 const LINKS = [
   { label: "Work",      id: "work"      },
@@ -45,6 +45,18 @@ export default function Navbar({ theme, setTheme, current }) {
               </button>
             ))}
           </div>
+
+          <button
+            className="nav-resume-btn"
+            onClick={() => {
+              document.getElementById("resume")?.scrollIntoView({ behavior: "smooth" });
+              setTimeout(() => window.print(), 800);
+            }}
+            aria-label="Download Resume"
+          >
+            <FiDownload style={{ marginRight: 5 }} />
+            Resume
+          </button>
 
           <button
             className="theme-toggle"
