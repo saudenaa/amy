@@ -1,6 +1,6 @@
 import { FiArrowDown } from "react-icons/fi";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import NetworkGraph from "./NetworkGraph.jsx";
+import TerminalHero from "./TerminalHero.jsx";
 
 export default function Hero() {
   const jumpTo = (id) =>
@@ -58,9 +58,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* ── Right: 3-D graph ────────────────────── */}
+          {/* ── Right: Terminal ─────────────────────── */}
           <div className="hero-graph">
-            <NetworkGraph />
+            <TerminalHero />
           </div>
         </div>
       </div>
