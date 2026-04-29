@@ -1,4 +1,8 @@
-function ExpCard({ date, company, role, body, bullets, stats }) {
+function N({ children }) {
+  return <span className="stat-num">{children}</span>;
+}
+
+function ExpCard({ date, company, role, mission, body, bullets, stats }) {
   return (
     <article className="card card-media">
       <div className="card-no-img">
@@ -8,6 +12,11 @@ function ExpCard({ date, company, role, body, bullets, stats }) {
       </div>
 
       <div className="card-body">
+        {mission && (
+          <p className="exp-mission">
+            <span className="exp-mission-label">The Mission —</span> {mission}
+          </p>
+        )}
         {body && <p className="exp-body">{body}</p>}
         {bullets && (
           <ul className="exp-bullets">
@@ -20,7 +29,7 @@ function ExpCard({ date, company, role, body, bullets, stats }) {
         )}
         {stats && (
           <div className="stat-row">
-            {stats.map((s) => <span key={s} className="stat-tag">{s}</span>)}
+            {stats.map((s) => <span key={s.label} className="stat-tag"><N>{s.num}</N> {s.label}</span>)}
           </div>
         )}
       </div>
@@ -34,10 +43,9 @@ export default function WorkExperience() {
       <div className="container">
         <div className="section-header reveal">
           <span className="eyebrow">Work Experience</span>
-          <h2 className="section-heading">Where the rubber met the road.</h2>
+          <h2 className="section-heading">Where the rubber meets the road.</h2>
           <p className="section-intro">
-            Real tools. Real users. Real impact — not side projects, not mockups.
-            The kind of work that changes how hundreds of people do their jobs every single day.
+            Real users. Real stakes. No mockups.
           </p>
         </div>
 
@@ -46,29 +54,38 @@ export default function WorkExperience() {
             <ExpCard
               date="January 2026 – Present"
               company="The Kroger Co."
-              role="Software Development Intern"
-              body="Built and shipped two internal tools that fundamentally changed how 500+ employees work — replacing manual email chains and Excel sheets with self-service apps that run on a single click."
+              role="Software Development & Systems Intern"
+              mission="Eliminate administrative friction in high-volume environments."
               bullets={[
                 {
                   title: "Leave Tracker",
-                  text: "Collapsed a multi-layer manager approval chain into one self-service app. Before it existed, a single leave request meant messages passing through manager after manager, manually updated Excel sheets, and someone building a calendar by hand. Now one click does everything.",
+                  text: "I identified a communication breakdown where 500+ employees were trapped in manual email chains. I engineered a one-click self-service app that collapsed multi-layer approval chains into a single source of truth.",
                 },
                 {
                   title: "Transportation Dispatch Hub",
-                  text: "After delivering the Leave Tracker, was trusted to build something at a larger scale. Connected 500+ supply chain employees across the fulfillment department, driving cost reductions at a billion-dollar operational scale.",
+                  text: "Scaled my influence to a billion-dollar fulfillment engine — connecting fragmented departments into a cohesive technical ecosystem that drives operational clarity at scale.",
                 },
               ]}
-              stats={["500+ employees impacted", "Billion-dollar cost impact", "2 tools built & shipped", "1 click replaces entire approval chain"]}
+              stats={[
+                { num: "500+", label: "Users Empowered" },
+                { num: "$1B+", label: "Operational Scale" },
+                { num: "100%", label: "Manual Task Reduction" },
+              ]}
             />
           </div>
 
           <div className="reveal reveal-delay-2">
             <ExpCard
               date="February 2025 – December 2025"
-              company="University of Cincinnati"
-              role="Marketing Analyst — CECH"
-              body="Turned raw departmental data into dashboards that senior leadership actually used to make decisions — 15+ interactive Power BI and Tableau dashboards serving as the single source of truth for executive reporting. Python automation processed 10,000+ interaction records, cutting manual work and improving decision speed by 15%."
-              stats={["15+ dashboards built", "10,000+ records automated", "15% faster decisions"]}
+              company="University of Cincinnati — CECH"
+              role="Strategic Data Analyst"
+              mission="Provide the single source of truth for executive leadership."
+              body="Transformed 10,000+ raw records into 15+ interactive dashboards that senior leadership actually used to make decisions. This wasn't about data visualization — it was about decision speed. My pipelines accelerated the ability to act by 15%."
+              stats={[
+                { num: "15+", label: "Dashboards Built" },
+                { num: "10,000+", label: "Records Automated" },
+                { num: "15%", label: "Faster Decisions" },
+              ]}
             />
           </div>
         </div>

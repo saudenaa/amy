@@ -14,7 +14,7 @@ export default function Hero() {
           {/* ── Left ─────────────────────────────────── */}
           <div className="hero-left">
             <span className="hero-eyebrow">
-              UC Cincinnati &nbsp;·&nbsp; Cybersecurity &amp; Data &nbsp;·&nbsp; May&nbsp;2029
+              AI &amp; IT &nbsp;·&nbsp; Data Science &nbsp;·&nbsp; Systems Architecture
             </span>
 
             <h1 className="hero-name">
@@ -23,16 +23,16 @@ export default function Hero() {
             </h1>
 
             <p className="hero-tagline">
-              I build tools that change<br className="tagline-break" />
-              how people actually work.
+              I don't build software.<br />
+              I build certainty.
             </p>
 
             <div className="hero-ctas">
               <button className="btn-primary" onClick={() => jumpTo("work")}>
-                Explore My Work
+                Enter System
               </button>
-              <button className="btn-secondary" onClick={() => jumpTo("video")}>
-                Watch Intro
+              <button className="btn-secondary" onClick={() => jumpTo("projects")}>
+                View Impact
               </button>
             </div>
 

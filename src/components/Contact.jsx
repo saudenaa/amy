@@ -63,12 +63,15 @@ export default function Contact() {
           <div className="reveal">
             <span className="eyebrow">Contact</span>
             <h2 className="contact-left-heading">
-              Let&rsquo;s build<br />something.
+              Let&rsquo;s build<br />the future.
             </h2>
+            <blockquote className="contact-manifesto">
+              "Technology should be invisible. If a tool requires a manual,
+              it isn't finished. I build for the person at the other end of the screen."
+            </blockquote>
             <p className="contact-left-body">
-              If you&rsquo;re building something interesting and think I might be useful,
-              I want to hear about it. Internship opportunities, research collabs, or just
-              saying hi — all welcome.
+              I am looking for high-stakes opportunities in AI, Systems Architecture,
+              and Strategic Data. If you&rsquo;re building something that matters — let&rsquo;s talk.
             </p>
             <a href="mailto:saudenaa@mail.uc.edu" className="contact-email-link">
               saudenaa@mail.uc.edu

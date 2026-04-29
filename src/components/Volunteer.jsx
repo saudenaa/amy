@@ -3,21 +3,21 @@ const ROLES = [
     org: "NASA International Space Apps Challenge",
     role: "Local Lead — Cincinnati",
     date: "March 2025 – October 2025",
-    body: "Led end-to-end logistics and technical coordination for 66+ participants — managed sponsor outreach, resolved hardware and software incidents in real time, and kept the entire event running under pressure.",
+    body: "Orchestrated Cincinnati's NASA hackathon for 66+ innovators. I managed the sponsors, the logistics, and the technical pressure — ensuring a seamless experience where participants could focus entirely on building.",
     stats: ["66+ participants", "Full event logistics owned"],
   },
   {
     org: "Gaskin Foundation",
     role: "STEM Robotics Instructor",
     date: "November 2025 – Present",
-    body: "Teaching K–12 students to design, program, and build automation robots — introducing engineering concepts, programming logic, and systems thinking through hands-on project-based learning.",
+    body: "Translating complex systems thinking into programming logic for K–12 students. If you can't explain it simply, you don't understand it well enough.",
     stats: [],
   },
   {
     org: "Bearcat Beginnings — UC-CECH",
     role: "Production Lead",
     date: null,
-    body: "Created the online experience that welcomes international students to UC before they set foot on campus — wrote the scripts, recorded and edited the content, and shaped the first impression thousands of students get of their new home.",
+    body: "Scripted and produced the digital welcome for thousands of international students — shaping the first human impression they have of their new home. Every word was intentional.",
     stats: [],
   },
   {
@@ -55,10 +55,10 @@ export default function Volunteer() {
       <div className="container">
         <div className="section-header reveal">
           <span className="eyebrow">Volunteer &amp; Leadership</span>
-          <h2 className="section-heading">The work that isn't on the payroll.</h2>
+          <h2 className="section-heading">Leadership beyond the code.</h2>
           <p className="section-intro">
-            I don't think leadership is something you do at work. These are the rooms I walked
-            into, the problems I picked up, and the people I tried to make things better for.
+            Real leadership isn't a job title. These are the rooms I walked into,
+            the problems I picked up, and the people I chose to show up for.
           </p>
         </div>
 
