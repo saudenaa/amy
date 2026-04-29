@@ -1,11 +1,10 @@
 import { FiArrowDown } from "react-icons/fi";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import TerminalHero from "./TerminalHero.jsx";
 
 const TICKER = [
   { num: "500+",  label: "Employees Impacted" },
-  { num: "$1B+",  label: "Operational Scale Managed" },
-  { num: "99%",   label: "Machine Learning Accuracy" },
+  { num: "$1B+",  label: "Operational Scale" },
+  { num: "99%",   label: "ML Accuracy" },
   { num: "10k+",  label: "Records Automated" },
 ];
 
@@ -15,50 +14,40 @@ export default function Hero() {
 
   return (
     <section id="hero">
-      <div className="container">
+      <div className="container hero-container">
 
-        <div className="hero-inner">
-          {/* ── Left ─────────────────────────────────── */}
-          <div className="hero-left">
-            <span className="hero-eyebrow">
-              Amy Sauden &nbsp;·&nbsp; UC Cincinnati &nbsp;·&nbsp; May 2029
-            </span>
+        <div className="hero-content">
+          <span className="hero-eyebrow">Amy Sauden</span>
 
-            <h1 className="hero-heading">
-              I architect systems that bridge the gap between complex data and human decision.
-            </h1>
+          <h1 className="hero-heading">
+            I architect systems that bridge the gap between complex data and human decision.
+          </h1>
 
-            <p className="hero-sub">
-              Most systems are built for machines; I build for the people who lead them.
-              I specialize in turning billion-dollar operational complexity into one-click reality.
-            </p>
+          <p className="hero-sub">
+            Most systems are built for machines; I build for the people who lead them.
+            I specialize in turning billion-dollar operational complexity into one-click reality.
+          </p>
 
-            <div className="hero-ctas">
-              <button className="btn-primary" onClick={() => jumpTo("work")}>
-                Enter System
-              </button>
-              <button className="btn-secondary" onClick={() => jumpTo("projects")}>
-                View Impact
-              </button>
-            </div>
-
-            <div className="hero-socials">
-              <a href="https://www.linkedin.com/in/amysauden/" target="_blank" rel="noreferrer" className="social-link" aria-label="LinkedIn">
-                <FaLinkedinIn />
-              </a>
-              <a href="https://github.com/saudenaa" target="_blank" rel="noreferrer" className="social-link" aria-label="GitHub">
-                <FaGithub />
-              </a>
-            </div>
+          <div className="hero-ctas">
+            <button className="btn-primary" onClick={() => jumpTo("work")}>
+              Enter System
+            </button>
+            <button className="btn-secondary" onClick={() => jumpTo("projects")}>
+              View Impact
+            </button>
           </div>
 
-          {/* ── Right: Terminal ─────────────────────── */}
-          <div className="hero-graph">
-            <TerminalHero />
+          <div className="hero-socials">
+            <a href="https://www.linkedin.com/in/amysauden/" target="_blank" rel="noreferrer" className="social-link" aria-label="LinkedIn">
+              <FaLinkedinIn />
+            </a>
+            <a href="https://github.com/saudenaa" target="_blank" rel="noreferrer" className="social-link" aria-label="GitHub">
+              <FaGithub />
+            </a>
           </div>
         </div>
 
-        {/* ── Impact Ticker ────────────────────────── */}
+        {/* Impact Ticker — within the viewport */}
         <div className="impact-ticker">
           {TICKER.map((t) => (
             <div key={t.label} className="impact-item">

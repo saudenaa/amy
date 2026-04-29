@@ -7,11 +7,12 @@ import Projects       from "./components/Projects.jsx";
 import Volunteer      from "./components/Volunteer.jsx";
 import Certifications from "./components/Certifications.jsx";
 import Resume         from "./components/Resume.jsx";
+import Skills         from "./components/Skills.jsx";
 import Contact        from "./components/Contact.jsx";
 import Footer         from "./components/Footer.jsx";
 
 // Section IDs for active-nav tracking
-const SECTION_IDS = ["hero", "work", "projects", "volunteer", "certifications", "resume", "contact"];
+const SECTION_IDS = ["hero", "work", "projects", "volunteer", "certifications", "resume", "skills", "contact"];
 
 export default function App() {
   const [theme,   setTheme]   = useState("dark");
@@ -65,6 +66,7 @@ export default function App() {
         <Volunteer />
         <Certifications />
         <Resume />
+        <Skills />
         <Contact />
       </main>
 
