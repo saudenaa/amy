@@ -5,7 +5,7 @@
   --bg:           #0E0E17;
   --bg-2:         #13131E;
   --bg-card:      #171722;
-  --text:         #F2F2F5;
+  --text:         #DCDCE6;
   --muted:        #8A8A9A;
   --subtle:       #3A3A50;
   --accent:       #F2F2F5;
@@ -23,7 +23,7 @@
 html[data-theme="light"] {
   --bg:           #F4F3EF;
   --bg-2:         #ECEAE4;
-  --bg-card:      #FAFAF7;
+  --bg-card:      #EEECEA;
   --text:         #1C1C1E;
   --muted:        #6C6C72;
   --subtle:       #AEAEB2;
@@ -1018,7 +1018,7 @@ html[data-theme="light"] .card-img-overlay {
   );
 }
 html[data-theme="light"] .card-no-img {
-  background: linear-gradient(135deg, #EDE8DF 0%, #FFFFFF 100%);
+  background: linear-gradient(135deg, #E8E4DB 0%, #F2F1EC 100%);
 }
 
 /* ─── Terminal hero ────────────────────────────────────────────── */
