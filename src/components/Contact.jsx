@@ -66,12 +66,13 @@ export default function Contact() {
               Let&rsquo;s build<br />the future.
             </h2>
             <blockquote className="contact-manifesto">
-              "Technology should be invisible. If a tool requires a manual,
-              it isn't finished. I build for the person at the other end of the screen."
+              "A system is only as good as the person's ability to use it. I build for the person
+              at the other end of the screen. I believe in Invisible Technology — systems so
+              efficient they stay out of the way, allowing leaders to lead."
             </blockquote>
             <p className="contact-left-body">
               I am looking for high-stakes opportunities in AI, Systems Architecture,
-              and Strategic Data. If you&rsquo;re building something that matters — let&rsquo;s talk.
+              and Strategic Data. Let&rsquo;s build the future of how people actually work.
             </p>
             <a href="mailto:saudenaa@mail.uc.edu" className="contact-email-link">
               saudenaa@mail.uc.edu

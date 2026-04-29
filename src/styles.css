@@ -21,9 +21,9 @@
 }
 
 html[data-theme="light"] {
-  --bg:           #FFFFFF;
-  --bg-2:         #F5F5F7;
-  --bg-card:      #FFFFFF;
+  --bg:           #F7F7F5;
+  --bg-2:         #EFEFEC;
+  --bg-card:      #FEFEFE;
   --text:         #1D1D1F;
   --muted:        #6E6E73;
   --subtle:       #AEAEB2;
@@ -106,10 +106,45 @@ section { padding: clamp(88px, 10vw, 140px) 0; }
 }
 
 .section-intro {
-  font-size: clamp(16px, 1.4vw, 18px);
+  font-size: clamp(16px, 1.4vw, 19px);
   color: var(--muted);
   max-width: 58ch;
   line-height: 1.82;
+}
+
+/* ─── Impact Ticker ────────────────────────────────────────────── */
+.impact-ticker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 64px;
+}
+
+.impact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 28px 32px;
+  border-right: 1px solid var(--border);
+}
+
+.impact-item:last-child { border-right: none; }
+
+.impact-num {
+  font-size: clamp(36px, 4.5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+}
+
+.impact-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -406,31 +441,31 @@ html[data-theme="light"] .navbar {
 
 .hero-eyebrow {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
-.hero-name {
-  font-size: clamp(58px, 8.5vw, 110px);
+.hero-heading {
+  font-size: clamp(28px, 3.8vw, 52px);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
   color: var(--text);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+  max-width: 18ch;
 }
-.hero-name-accent { color: var(--accent); display: block; }
 
-.hero-tagline {
-  font-size: clamp(17px, 2vw, 22px);
-  font-weight: 600;
+.hero-sub {
+  font-size: clamp(16px, 1.5vw, 18px);
+  font-weight: 400;
   color: var(--muted);
-  line-height: 1.5;
-  margin-bottom: 40px;
-  max-width: 38ch;
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 42ch;
 }
 
 .hero-ctas {
@@ -498,10 +533,16 @@ html[data-theme="light"] .navbar {
 }
 
 @media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-graph  { height: 360px; order: -1; }
-  .hero-name   { font-size: clamp(48px, 11vw, 72px); }
+  .hero-inner   { grid-template-columns: 1fr; gap: 36px; }
+  .hero-left    { order: 1; }
+  .hero-graph   { order: 2; height: 320px; }
   .scroll-arrow { display: none; }
+  .hero-heading { max-width: 100%; }
+  .hero-sub     { max-width: 100%; }
+  .nav-resume-btn { display: none; }
+  .impact-ticker  { grid-template-columns: 1fr 1fr; gap: 1px; }
+  .impact-item    { padding: 20px 16px; }
+  .impact-num     { font-size: clamp(32px, 8vw, 44px); }
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -569,7 +610,7 @@ html[data-theme="light"] .navbar {
   font-weight: 700;
 }
 
-.exp-body    { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+.exp-body    { font-size: 16.5px; color: var(--muted); line-height: 1.82; margin-bottom: 20px; }
 
 /* Bullets ONLY inside work experience */
 .exp-bullets {
@@ -579,7 +620,7 @@ html[data-theme="light"] .navbar {
   flex-direction: column;
   gap: 14px;
 }
-.exp-bullets li       { font-size: 15px; color: var(--muted); line-height: 1.78; }
+.exp-bullets li       { font-size: 16px; color: var(--muted); line-height: 1.8; }
 .exp-bullets li strong { color: var(--text); font-weight: 700; }
 
 /* ═══════════════════════════════════════════════════════════
@@ -601,7 +642,7 @@ html[data-theme="light"] .navbar {
 .project-type  { font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); }
 .project-tech  { font-size: 11.5px; color: var(--subtle); font-weight: 500; }
 .project-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 12px; line-height: 1.3; }
-.project-body  { font-size: 14.5px; color: var(--muted); line-height: 1.8; }
+.project-body  { font-size: 16px; color: var(--muted); line-height: 1.82; }
 
 /* ═══════════════════════════════════════════════════════════
    VOLUNTEER
@@ -616,7 +657,7 @@ html[data-theme="light"] .navbar {
 .vol-role     { font-size: 13px; font-weight: 600; color: var(--accent); margin-bottom: 3px; }
 .vol-date     { font-size: 11.5px; color: var(--subtle); margin-bottom: 16px; }
 .vol-divider  { width: 28px; height: 1.5px; background: var(--accent); border-radius: 2px; margin-bottom: 16px; opacity: 0.45; }
-.vol-body     { font-size: 14px; color: var(--muted); line-height: 1.8; }
+.vol-body     { font-size: 16px; color: var(--muted); line-height: 1.82; }
 
 /* ═══════════════════════════════════════════════════════════
    CERTIFICATIONS
