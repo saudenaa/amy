@@ -1,7 +1,3 @@
-function N({ children }) {
-  return <span className="stat-num">{children}</span>;
-}
-
 function ExpCard({ date, company, role, mission, body, bullets, stats }) {
   return (
     <article className="card card-media">
@@ -20,16 +16,16 @@ function ExpCard({ date, company, role, mission, body, bullets, stats }) {
         {body && <p className="exp-body">{body}</p>}
         {bullets && (
           <ul className="exp-bullets">
-            {bullets.map((b) => (
-              <li key={b.title}>
-                <strong>{b.title}</strong> — {b.text}
-              </li>
-            ))}
+            {bullets.map((b, i) => <li key={i}>{b}</li>)}
           </ul>
         )}
         {stats && (
           <div className="stat-row">
-            {stats.map((s) => <span key={s.label} className="stat-tag"><N>{s.num}</N> {s.label}</span>)}
+            {stats.map((s) => (
+              <span key={s.label} className="stat-tag">
+                <span className="stat-num">{s.num}</span> {s.label}
+              </span>
+            ))}
           </div>
         )}
       </div>
@@ -44,50 +40,103 @@ export default function WorkExperience() {
         <div className="section-header reveal">
           <span className="eyebrow">Work Experience</span>
           <h2 className="section-heading">Where the rubber meets the road.</h2>
-          <p className="section-intro">
-            Real users. Real stakes. No mockups.
-          </p>
+          <p className="section-intro">Real users. Real stakes. No mockups.</p>
         </div>
 
         <div className="work-stack">
+
+          {/* Kroger AI & Data Strategy — newest */}
           <div className="reveal reveal-delay-1">
             <ExpCard
-              date="January 2026 – Present"
+              date="May 2026 – August 2026 · Incoming"
               company="The Kroger Co."
-              role="Software Development & Systems Intern"
-              mission="Eliminate administrative friction in high-volume environments."
+              role="AI & Data Strategy Intern"
               bullets={[
-                {
-                  title: "Leave Tracker",
-                  text: "I identified a communication breakdown where 500+ employees were trapped in manual email chains. I engineered a one-click self-service app that collapsed multi-layer approval chains into a single source of truth.",
-                },
-                {
-                  title: "Transportation Dispatch Hub",
-                  text: "Scaled my influence to a billion-dollar fulfillment engine — connecting fragmented departments into a cohesive technical ecosystem that drives operational clarity at scale.",
-                },
+                <>
+                  <strong>Generative Decision Intelligence: Architecting</strong> a custom{" "}
+                  <strong>LLM-driven interface</strong> ("AI for Leaders") that allows executives
+                  to query complex datasets using natural language.
+                </>,
+                <>
+                  <strong>Strategic Velocity: Automating</strong> high-level data synthesis to
+                  provide <strong>instantaneous answers</strong>, eliminating the need for manual
+                  analyst reports and reducing information lag.
+                </>,
+                <>
+                  <strong>Process Efficiency: Optimizing</strong> data pipelines to ensure{" "}
+                  <strong>real-time accuracy</strong>, shifting leadership from reactive browsing
+                  to proactive, AI-assisted decision-making.
+                </>,
+              ]}
+            />
+          </div>
+
+          {/* Kroger Software Developer */}
+          <div className="reveal reveal-delay-2">
+            <ExpCard
+              date="January 2026 – April 2026"
+              company="The Kroger Co."
+              role="Software Developer Intern"
+              bullets={[
+                <>
+                  <strong>Systemic Consolidation: Migrated</strong> a <strong>$1B+</strong>{" "}
+                  logistics workflow from fragmented chat records to a centralized technical
+                  engine, ensuring <strong>100% data retention.</strong>
+                </>,
+                <>
+                  <strong>Operational Transparency: Engineered</strong> a real-time tracking
+                  system utilized by <strong>500+ employees</strong>, eliminating data loss and
+                  accelerating coordination between Planning and Transportation teams.
+                </>,
+                <>
+                  <strong>Workforce Optimization: Architected</strong> a "one-click" self-service
+                  system for <strong>56+ employees</strong>, achieving{" "}
+                  <strong>100% manual task reduction</strong> for leave tracking.
+                </>,
+                <>
+                  <strong>Data Integrity: Identified and corrected</strong> high-frequency
+                  scheduling errors and duplicate entries, establishing a{" "}
+                  <strong>Single Source of Truth</strong> for workforce data.
+                </>,
               ]}
               stats={[
-                { num: "500+", label: "Users Empowered" },
+                { num: "500+", label: "Employees Impacted" },
                 { num: "$1B+", label: "Operational Scale" },
                 { num: "100%", label: "Manual Task Reduction" },
               ]}
             />
           </div>
 
+          {/* UC Strategic Data Analyst */}
           <div className="reveal reveal-delay-2">
             <ExpCard
               date="February 2025 – December 2025"
               company="University of Cincinnati — CECH"
               role="Strategic Data Analyst"
               mission="Provide the single source of truth for executive leadership."
-              body="Transformed 10,000+ raw records into 15+ interactive dashboards that senior leadership actually used to make decisions. This wasn't about data visualization — it was about decision speed. My pipelines accelerated the ability to act by 15%."
+              bullets={[
+                <>
+                  <strong>Decision Intelligence: Transformed 10,000+ raw records</strong> into{" "}
+                  <strong>15+ interactive dashboards</strong> designed for senior leadership.
+                </>,
+                <>
+                  <strong>Operational Acceleration: Automated</strong> data pipelines that
+                  reduced information lag, increasing executive{" "}
+                  <strong>decision-making speed by 15%.</strong>
+                </>,
+                <>
+                  <strong>Impact-Driven Design: Shifted</strong> department workflows from
+                  manual guesswork to high-fidelity, data-driven strategy.
+                </>,
+              ]}
               stats={[
-                { num: "15+", label: "Dashboards Built" },
+                { num: "15+",     label: "Dashboards Built" },
                 { num: "10,000+", label: "Records Automated" },
-                { num: "15%", label: "Faster Decisions" },
+                { num: "15%",     label: "Faster Decisions" },
               ]}
             />
           </div>
+
         </div>
       </div>
     </section>
