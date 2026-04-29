@@ -49,7 +49,7 @@ export default function WorkExperience() {
           <div className="reveal reveal-delay-1">
             <ExpCard
               date="May 2026 – August 2026 · Incoming"
-              company="The Kroger Co."
+              company="Kroger"
               role="AI & Data Strategy Intern"
               bullets={[
                 <>
@@ -75,7 +75,7 @@ export default function WorkExperience() {
           <div className="reveal reveal-delay-2">
             <ExpCard
               date="January 2026 – April 2026"
-              company="The Kroger Co."
+              company="Kroger"
               role="Software Developer Intern"
               bullets={[
                 <>
