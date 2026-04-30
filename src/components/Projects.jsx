@@ -2,6 +2,15 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const PROJECTS = [
   {
+    type: "Full-Stack Engineering · AI & Data",
+    tech: "Team Lead · AI Triage Logic · Optimized Resource Flow",
+    title: "FixMate",
+    subtitle: "AI-Driven Home Maintenance · Hackathon",
+    body: "Most platforms are slow and manual. Leading a team of three, I architected an AI triage engine to solve simple problems instantly — ensuring professional resources are only used for complex structural needs. The most effective systems automate the noise so that human expertise stays focused on high-value work.",
+    stats: ["Team Lead", "AI Triage Engine", "Hackathon Build"],
+    github: null,
+  },
+  {
     type: "Research",
     tech: "Fuzzy Logic · Deep Learning · Python",
     title: "AI / Bio Research Lab",
